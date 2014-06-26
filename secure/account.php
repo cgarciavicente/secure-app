@@ -8,12 +8,12 @@ if ($user=="" || $user!="cesar"){header ("Location:http://localhost/");}
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Página config.php</title>
+    <title>Página account.php</title>
   </head>
 <body>
-<h1> ¡Config! </h1>
+<h1> ¡Account! </h1>
 <p> Esta página tiene acceso restringido </p>
 <a href="wellcome.php">La página de wellcome</a><br>
-<a href="account.php">La página de account</a>
+<a href="config.php">La página de config</a>
 </body>
 </html>

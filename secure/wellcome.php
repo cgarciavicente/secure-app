@@ -13,6 +13,7 @@ if ($user=="" || $user!="cesar"){header ("Location:http://localhost/");}
 <body>
 <h1> Bienvenido </h1>
 <p> Esta página tiene acceso restringido </p>
-<a href="config.php">La página de config</a>
+<a href="config.php">La página de config</a><br>
+<a href="account.php">La página de account</a>
 </body>
 </html>
