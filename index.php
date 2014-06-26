@@ -1,10 +1,13 @@
 <?php
+session_start();
 $message="";
 $user="";
 if (isset($_POST["user"], $_POST["pass"])){
 $user=$_POST["user"];
 $pass=$_POST["pass"];
-if ($user=="cesar"&& $pass=="1234"){header("Location: http://localhost/secure/wellcome.php");}
+if ($user=="cesar"&& $pass=="1234"){
+	$_SESSION["usuario_autorizado"]=$user;
+	header("Location: http://localhost/secure/wellcome.php");}
 else{$message="Incorrecto";}}
 ?>
 <!DOCTYPE html>
