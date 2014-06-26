@@ -1,9 +1,11 @@
 <?php
+$message="";
+$user="";
 if (isset($_POST["user"], $_POST["pass"])){
 $user=$_POST["user"];
 $pass=$_POST["pass"];
-if ($user=="cesar"&& $pass=="1234"){echo "Correcto";}
-else{echo "Incorrecto";}}
+if ($user=="cesar"&& $pass=="1234"){$message="Correcto";}
+else{$message="Incorrecto";}}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,8 +15,11 @@ else{echo "Incorrecto";}}
     <title>Aplicación segura</title>
   </head>
 <body>
+<?php echo $message;
+?>
+<br>
 <form action="" method="post">
-<input type="text" name="user" placeholder="Email"><br>
+<input type="text" name="user" value="<?php echo $user ?>" placeholder="Email"><br>
 <input type="password" name="pass" placeholder="Contraseña"><br>
 <input type="submit" value="Entrar">
 </form>
