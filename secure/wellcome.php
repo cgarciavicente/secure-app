@@ -1,8 +1,6 @@
 <?php
 session_start();
-$user="";
-if (isset($_SESSION["usuario_autorizado"])){$user=$_SESSION["usuario_autorizado"];}
-if ($user=="" || $user!="cesar"){header ("Location:http://localhost/");}
+if (!isset($_SESSION["usuario_autorizado"])){header ("Location:http://localhost/");} //Si $_SESSION está vacío, no puede entrar
 ?>
 <!DOCTYPE html>
 <html lang="es">
